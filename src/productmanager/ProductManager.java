@@ -60,25 +60,25 @@ public class ProductManager<E extends Product> implements Manager<E> {
     }
 
     @Override
-    public String searchByID(int ID) {
+    public void searchByID(int ID) {
         for (int i = 0; i < list.size(); i++) {
             int searchID = list.get(i).getID();
             if (searchID == ID) {
-                return list.get(i).toString();
+                System.out.println(list.get(i).toString());
             }
         }
-        return "Ko tìm thấy sản phẩm có ID như yêu cầu";
+        System.out.println("Ko tìm thấy sản phẩm có ID như yêu cầu");
     }
 
     @Override
-    public String searchByName(String name) {
+    public void searchByName(String name) {
         for (int i = 0; i < list.size(); i++) {
             String searchName = list.get(i).getName();
             if (searchName == name) {
-                return list.get(i).toString();
+                System.out.println(list.get(i).toString());
             }
         }
-        return "Ko tìm thấy sản phẩm có tên như yêu cầu";
+        System.out.println("Ko tìm thấy sản phẩm có tên như yêu cầu");
     }
 
     @Override
